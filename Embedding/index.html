@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tableau Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
 </head>
 
 <body>
-    <h1>This is a header 👾 </h1>
-    <h2>This is another header</h2>
-    <p>Sakif is boss man</p>
+    <h1>Tableau Dashboard Embedding 👾</h1>
+    <h2>B2S Project</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eos molestiae cupiditate beatae voluptatibus eligendi tempore delectus praesentium consequatur sapiente rerum officia veniam voluptas quis, quae perferendis rem cum? Maiores!</p>
+
+    <fieldset id="first_row_of_buttons">
+        <legend>Filter the view</legend>
+        <input type="button" value="Oregon & Washington Only" id="oregon_and_washington">
+        <input type="button" value="Reset" id="reset">
+        <input type="button" value="Undo" id="undo">
+    </fieldset>
+
     <div class="content">
-        <tableau-viz id="tableauViz"       
+        <tableau-viz id="tableauViz"
           src='https://public.tableau.com/views/Superstore_embedded_800x800/Overview'      
-          toolbar="bottom" hide-tabs>
+          width="900" 
+          height="900" 
+          toolbar="bottom" 
+          hide-tabs>
         </tableau-viz>
     </div>
 
     <script src="app.js"></script>
-
-    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
-    </script>
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
 </body>
 </html>
